@@ -1,56 +1,71 @@
 <project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
-	xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
-	<modelVersion>4.0.0</modelVersion>
-	<groupId>com.jeesuite</groupId>
-	<artifactId>jeesuite-libs</artifactId>
-	<version>1.0.0-SNAPSHOT</version>
-	<packaging>pom</packaging>
-	<description>java 后台开发套件</description>
+         xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
+    <modelVersion>4.0.0</modelVersion>
+    <groupId>com.jeesuite</groupId>
+    <artifactId>jeesuite-libs</artifactId>
+    <version>1.0.0-SNAPSHOT</version>
+    <packaging>pom</packaging>
+    <description>java 后台开发套件</description>
 
-	<properties>
-		<project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
-		<project.build.jdk>1.8</project.build.jdk>
-		<spring.version>4.1.7.RELEASE</spring.version>
-		<kafka.version>0.9.0.0</kafka.version>
-		<zkclient.version>0.7</zkclient.version>
-		<zookeeper.version>3.4.6</zookeeper.version>
-		<jedis.version>2.8.0</jedis.version>
-		<mybatis.version>3.3.0</mybatis.version>
-		<mapper.version>3.3.4</mapper.version>
-		<druid.version>1.0.16</druid.version>
-		<junit.version>4.12</junit.version>
-	</properties>
-	<modules>
-		<module>jeesuite-common</module>
-		<module>jeesuite-kafka</module>
-		<module>jeesuite-tutorial</module>
-		<module>jeesuite-spring</module>
-		<module>jeesuite-cache</module>
-		<module>jeesuite-scheduler</module>
-		<module>jeesuite-monitor-web</module>
-		<module>jeesuite-mybatis</module>
-	</modules>
+    <properties>
+        <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
+        <project.build.jdk>1.8</project.build.jdk>
+        <spring.version>4.1.7.RELEASE</spring.version>
+        <kafka.version>0.9.0.0</kafka.version>
+        <zkclient.version>0.7</zkclient.version>
+        <zookeeper.version>3.4.6</zookeeper.version>
+        <jedis.version>2.8.0</jedis.version>
+        <mybatis.version>3.3.0</mybatis.version>
+        <mapper.version>3.3.4</mapper.version>
+        <druid.version>1.0.16</druid.version>
+        <junit.version>4.12</junit.version>
+    </properties>
+    <modules>
+        <module>jeesuite-common</module>
+        <module>jeesuite-kafka</module>
+        <module>jeesuite-tutorial</module>
+        <module>jeesuite-spring</module>
+        <module>jeesuite-cache</module>
+        <module>jeesuite-scheduler</module>
+        <!--<module>jeesuite-monitor-web</module>-->
+        <module>jeesuite-mybatis</module>
+    </modules>
 
-	<dependencies>
+    <dependencies>
 
-		<dependency>
-			<groupId>org.apache.logging.log4j</groupId>
-			<artifactId>log4j-core</artifactId>
-			<version>2.5</version>
-		</dependency>
+        <dependency>
+            <groupId>org.apache.logging.log4j</groupId>
+            <artifactId>log4j-core</artifactId>
+            <version>2.5</version>
+        </dependency>
 
-		<dependency>
-			<groupId>org.apache.logging.log4j</groupId>
-			<artifactId>log4j-slf4j-impl</artifactId>
-			<version>2.5</version>
-		</dependency>
+        <dependency>
+            <groupId>org.apache.logging.log4j</groupId>
+            <artifactId>log4j-slf4j-impl</artifactId>
+            <version>2.5</version>
+        </dependency>
 
-		<dependency>
-			<groupId>org.slf4j</groupId>
-			<artifactId>slf4j-api</artifactId>
-			<version>1.7.21</version>
-		</dependency>
+        <dependency>
+            <groupId>org.slf4j</groupId>
+            <artifactId>slf4j-api</artifactId>
+            <version>1.7.21</version>
+        </dependency>
 
 
-	</dependencies>
+    </dependencies>
+
+    <build>
+        <plugins>
+            <plugin>
+                <groupId>org.apache.maven.plugins</groupId>
+                <artifactId>maven-compiler-plugin</artifactId>
+                <version>3.7.0</version>
+                <configuration>
+                    <source>1.8</source>
+                    <target>1.8</target>
+                    <encoding>UTF-8</encoding>
+                </configuration>
+            </plugin>
+        </plugins>
+    </build>
 </project>
